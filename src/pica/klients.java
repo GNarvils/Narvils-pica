@@ -8,7 +8,8 @@ public class klients {
    String telefons;
    String adrese;
    Double samaksajis;
-   public klients(String v, String u, String tel, String adr, Double samak) {
+   int pasutijumaNr;
+   public klients(String v, String u, String tel, String adr, Double samak, int pasutNr) {
 	   this.vards = v;
 	   this.uzvards = u;
 	   this.telefons = tel;
@@ -16,7 +17,7 @@ public class klients {
 	   this.samaksajis = samak;
    }
    public void izvaditInfoK() {
-		JOptionPane.showMessageDialog(null, "Vārds: "+vards+", Uzvārds: "+uzvards+", Telefona numurs: "+telefons+", Adrese: "+adrese+", samaksajis: "+samaksajis);
+		JOptionPane.showMessageDialog(null, "Vārds: "+vards+", Uzvārds: "+uzvards+", Telefona numurs: "+telefons+", Adrese: "+adrese+", Samaksajis: "+samaksajis+ ", PasūtijumaNr: "+pasutijumaNr);
    }
  
 }
