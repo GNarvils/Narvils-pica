@@ -22,4 +22,10 @@ public class pica {
 		JOptionPane.showMessageDialog(null, "Nosaukums: "+nosaukums+", Siera veids: "+siers+", Mērce: "+merce+", Toppinga vieds: "+toppings+", Cena: "+cena);
 
 	}
+   public String noteiktN() {
+	   return nosaukums;
+   }
+   public Double notiektC() {
+	   return cena;
+   }
 }
