@@ -149,6 +149,7 @@ public class Picerija {
         	if(mekle.equals(mekleM[i])){
                     cena = cenaM[i];
                     izveidotK(klienti, k, klientsP, cena);
+                    klienti[k].izvaditInfoK();
                 	saglabaK(klientsP);
                 	JOptionPane.showMessageDialog(null, "Jūsu pasūtījums ir pieņemts!");
                 	k++;

@@ -1,2 +1,1 @@
 Nosaukums: 1, Izmers: 1.0, Siera veids: 1, Mērce: 1, Toppings: 1, Cena: 1.0 	
-Nosaukums: 2, Izmers: 2.0, Siera veids: 2, Mērce: 2, Toppings: 2, Cena: 2.0 	

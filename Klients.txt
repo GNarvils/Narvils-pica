@@ -1,2 +1,1 @@
-Vards: g, Uzvards: g, Telefons: g, Adrese: g, Samaksajis:  1.0, Pasutijuma numurs: 3218 	
-Vards: sa, Uzvards: s, Telefons: s, Adrese: s, Samaksajis:  2.0, Pasutijuma numurs: 8849 	
+Vards: r, Uzvards: r, Telefons: r, Adrese: r, Samaksajis:  1.0, Pasutijuma numurs: 8079 	
