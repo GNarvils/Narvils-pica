@@ -8,8 +8,8 @@ public class klients {
    String telefons;
    String adrese;
    Double samaksajis;
-   int pasutijumaNr;
-   public klients(String v, String u, String tel, String adr, Double samak, int pasutNr) {
+   String pasutijumaNr;
+   public klients(String v, String u, String tel, String adr, Double samak, String pasutNr) {
 	   this.vards = v;
 	   this.uzvards = u;
 	   this.telefons = tel;

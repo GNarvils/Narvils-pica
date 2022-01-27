@@ -19,7 +19,7 @@ public class Picerija {
 		  String toppings = JOptionPane.showInputDialog("Ko liksiet virsū picai?");
 		  Double cena = Double.parseDouble(JOptionPane.showInputDialog("Cik maksās pica?"));
    	  masivs[p]= new pica(nosaukums, izmers, siers, merce, toppings, cena);
-   	  pMasivs[p] = nosaukums+" "+izmers+" "+siers+" "+merce+" "+toppings+" "+cena;
+   	  pMasivs[0] = "Nosaukums: "+nosaukums+", Izmers: "+izmers+", Siera veids: "+siers+", Mērce: "+merce+", Toppings: "+toppings+", Cena: "+cena;
 	   return masivs;
    }
    public static void saglabaP(String[] masivs){
@@ -41,7 +41,7 @@ public class Picerija {
 		  String uzvardD = JOptionPane.showInputDialog("Kāds jums ir uzvārds?");
 		  String telefonsD = JOptionPane.showInputDialog("Kāds ir jūsu telefona numurs?");
 	  masivs[d]= new darbinieks(vardsD, uzvardD, telefonsD);
-	  pMasivs[d]= vardsD+" "+uzvardD+" "+telefonsD;
+	  pMasivs[0]= "Vards: "+vardsD+", Uzvards: "+uzvardD+", Telefons: "+telefonsD;
 	   return masivs;  
 }
    public static void saglabaD(String masivs[]){
@@ -71,8 +71,9 @@ public class Picerija {
 			  nr= rand.nextInt(10);
 			  sb.append(nr);
 			  }
-	  masivs[k]= new klients(vardsK, uzvardK, telefonsK, adrese, cena, nr);
-	  pMasivs[k]= vardsK+" "+uzvardK+" "+telefonsK+" "+adrese+" "+cena+" "+nr;
+		     String kNr=sb.toString();
+	  masivs[k]= new klients(vardsK, uzvardK, telefonsK, adrese, cena, kNr);
+	  pMasivs[0]= "Vards: "+vardsK+", Uzvards: "+uzvardK+", Telefons: "+telefonsK+", Adrese: "+adrese+", Samaksajis:  "+cena+", Pasutijuma numurs: "+kNr;
 	   return masivs;  
 }
    public static void saglabaK(String masivs[]){
@@ -84,7 +85,7 @@ public class Picerija {
 			   }
 			   raksta.println("\t");
 			   raksta.close();
-			   JOptionPane.showMessageDialog(null, "Jūsu dati ir saglabāts failā "+failsDarbinieki+" !");
+			   JOptionPane.showMessageDialog(null, "Jūsu dati ir saglabāts failā "+failsKlienti+" !");
 			   }catch(Exception e){
 				    	JOptionPane.showMessageDialog(null, "Programmā ir kļūda klientu rakstisanas procesa!", "Kļūda", JOptionPane.ERROR_MESSAGE);    	
 			   }
@@ -110,9 +111,9 @@ public class Picerija {
 		pica[] picas = null;
 		darbinieks[] darbinieki = null;
 		klients[] klienti = null;
-		String[] picaP = new String[10];
-		String[] darbinieksP = new String[10];
-		String[] klientsP = new String[10];
+		String[] picaP = new String[1];
+		String[] darbinieksP = new String[1];
+		String[] klientsP = new String[1];
         double cena;
 		int p = 0, d = 0, k = 0;
 		JOptionPane.showMessageDialog(null, "Esiet sveicināti picērijā!");
