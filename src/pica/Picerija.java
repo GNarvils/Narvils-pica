@@ -9,7 +9,7 @@ public class Picerija {
    static String failsPicas = "Pica.txt";
    static String failsKlienti = "Klients.txt";
    static String failsDarbinieki  = "Darbinieki.txt";
-   static pica[] izveidot(pica[] masivs, int p) {
+   static pica[] izveidotP(pica[] masivs, int p) {
 		  String nosaukums = JOptionPane.showInputDialog("Lūdzu pasakiet picas nosaukumu?");
 		  Double izmers = Double.parseDouble(JOptionPane.showInputDialog("Kāds būs picas izmērs cm?"));
 		  String siers = JOptionPane.showInputDialog("Lūdzu pasakiet sieru veidu?");
@@ -17,8 +17,6 @@ public class Picerija {
 		  String toppings = JOptionPane.showInputDialog("Ko liksiet virsū picai?");
 		  Double cena = Double.parseDouble(JOptionPane.showInputDialog("Cik maksās pica?"));
    	  masivs[p]= new pica(nosaukums, izmers, siers, merce, toppings, cena);
-	      
-	   
 	   return masivs;
    }
    public static void saglabaP(pica[] picas){
@@ -26,12 +24,11 @@ public class Picerija {
 		   FileWriter fw = new FileWriter(failsPicas, true);
 		   PrintWriter raksta = new PrintWriter(fw);
 		   for(int i=0; i<picas.length; i++){
-				   raksta.print(picas[i]+" \t");	   
-			   raksta.println();
+			   raksta.print(picas[i]+" ");	   
 		   }
-		   raksta.println("_______________");
+		   raksta.println("\t");
 		   raksta.close();
-		   JOptionPane.showMessageDialog(null, "Masivs ir saglabats faila "+failsPicas+" !");
+		   JOptionPane.showMessageDialog(null, "Picas dati ir saglabāts failā "+failsPicas+" !");
 		   }catch(Exception e){
 			    	JOptionPane.showMessageDialog(null, "Programmā ir kļūda rakstisanas procesa!", "Kļūda", JOptionPane.ERROR_MESSAGE);    	
 		   }
@@ -50,7 +47,7 @@ public class Picerija {
         switch(izvele) {
         case "1":
         	picas = new pica[10];
-        	izveidot(picas, p);
+        	izveidotP(picas, p);
         	picas[p].izvaditInfoP();
         	saglabaP(picas);
         	p++;
@@ -61,7 +58,8 @@ public class Picerija {
         case "3":
         	klienti = new klients[10];
         break;
-        case "4": break;
+        case "4":
+        break;
         case "ata": JOptionPane.showMessageDialog(null, "Paldies, ka atnācāt!" ); break;
         default: JOptionPane.showMessageDialog(null, "Mēs nezinam pa, ko jūs runājat!",  "Kļūda", JOptionPane.ERROR_MESSAGE);break;
         }
