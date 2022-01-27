@@ -11,7 +11,7 @@ public class Picerija {
    static String failsPicas = "Pica.txt";
    static String failsKlienti = "Klients.txt";
    static String failsDarbinieki  = "Darbinieki.txt";
-   static pica[] izveidotP(pica[] masivs, int p, String pMasivs[]) {
+   static pica[] izveidotP(pica[] masivs, int p, String pMasivs[], String mekleN[], Double mekleC[]) {
 		  String nosaukums = JOptionPane.showInputDialog("Lūdzu pasakiet picas nosaukumu?");
 		  Double izmers = Double.parseDouble(JOptionPane.showInputDialog("Kāds būs picas izmērs cm?"));
 		  String siers = JOptionPane.showInputDialog("Lūdzu pasakiet sieru veidu?");
@@ -20,7 +20,9 @@ public class Picerija {
 		  Double cena = Double.parseDouble(JOptionPane.showInputDialog("Cik maksās pica?"));
    	  masivs[p]= new pica(nosaukums, izmers, siers, merce, toppings, cena);
    	  pMasivs[0] = "Nosaukums: "+nosaukums+", Izmers: "+izmers+", Siera veids: "+siers+", Mērce: "+merce+", Toppings: "+toppings+", Cena: "+cena;
-	   return masivs;
+	   mekleN[p] = nosaukums;
+	   mekleC[p] = cena;
+   	  return masivs;
    }
    public static void saglabaP(String[] masivs){
    	try{
@@ -114,6 +116,8 @@ public class Picerija {
 		String[] picaP = new String[1];
 		String[] darbinieksP = new String[1];
 		String[] klientsP = new String[1];
+    	String[] mekleM = new String[10];
+    	Double[] cenaM = new Double[10];
         double cena;
 		int p = 0, d = 0, k = 0;
 		JOptionPane.showMessageDialog(null, "Esiet sveicināti picērijā!");
@@ -124,7 +128,7 @@ public class Picerija {
         switch(izvele) {
         case "1":
         	picas = new pica[10];
-        	izveidotP(picas, p, picaP);
+        	izveidotP(picas, p, picaP, mekleM, cenaM);
         	picas[p].izvaditInfoP();
         	saglabaP(picaP);
         	JOptionPane.showMessageDialog(null, "Jūs esat izveidojis jaunu picu!");
@@ -139,32 +143,26 @@ public class Picerija {
         	d++;
         break;
         case "3":
-        	try {
         	klienti = new klients[10];
         	String mekle = JOptionPane.showInputDialog("Kādu picu jūs sūtīsiet?");
-        	for(int i=0; i<picas.length; i++){
-        	if(mekle.equals(picas[i].noteiktN())){
-                    JOptionPane.showMessageDialog(null, "Tāda pica mums ir!");
-                    cena = (picas[i].notiektC());
+        	for(int i=0; i<mekleM.length; i++){
+        	if(mekle.equals(mekleM[i])){
+                    cena = cenaM[i];
                     izveidotK(klienti, k, klientsP, cena);
-                    klienti[d].izvaditInfoK();
                 	saglabaK(klientsP);
-				  }else{
-					JOptionPane.showMessageDialog(null, "Mums tāda pica nav!");  
-				  }
-			  }
-        	k++;
-        	}catch(Exception e){
-        		JOptionPane.showMessageDialog(null, "Programmā ir kļūda meklēšanas procesā", "Kļūda", JOptionPane.ERROR_MESSAGE);
+                	JOptionPane.showMessageDialog(null, "Jūsu pasūtījums ir pieņemts!");
+                	k++;
+				}
         	}
+    	
         break;
         case "4":
         	nolasit(picas);
         break;
-        case "ata": JOptionPane.showMessageDialog(null, "Paldies, ka atnācāt!" ); break;
+        case "ata": JOptionPane.showMessageDialog(null, "Uz redzēšanos!" ); break;
         default: JOptionPane.showMessageDialog(null, "Mēs nezinam pa, ko jūs runājat!",  "Kļūda", JOptionPane.ERROR_MESSAGE);break;
         }
 	}while(!izvele.equals("ata"));
 	}
 
-}
+	}

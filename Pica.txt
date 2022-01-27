@@ -1,4 +1,0 @@
-
-Nosaukums: Hawaii, Izmers: 30.0 holandes lampa lampa 55.0 	
-Nosaukums: Amerikas, Izmers: 34.0 5 2 5 7.0 	
-Nosaukums: 1, Izmers: 1.0, Siera veids: 1, Mērce: 1, Toppings: 1, Cena: 1.0 	

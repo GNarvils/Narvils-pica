@@ -1,6 +1,5 @@
 package pica;
 
-import javax.swing.JOptionPane;
 
 public class klients {
    String vards;
@@ -16,8 +15,4 @@ public class klients {
 	   this.adrese = adr;
 	   this.samaksajis = samak;
    }
-   public void izvaditInfoK() {
-		JOptionPane.showMessageDialog(null, "Vārds: "+vards+", Uzvārds: "+uzvards+", Telefona numurs: "+telefons+", Adrese: "+adrese+", Samaksajis: "+samaksajis+ ", PasūtijumaNr: "+pasutijumaNr);
-   }
- 
 }
