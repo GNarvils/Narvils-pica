@@ -7,11 +7,11 @@ Java projekts kurš ļāuj lietotājam vadīt picēriju. Var veidot jaunu picu, 
 
 ### **Daramo darbu saraksts**
 
--[x] Izveidot klasi klients, pica un darbinieks.
--[x] Main klasē picērija izveidot metodi, kas izveido jaunu picu un saglabā informāciju failā
--[x] Main klasē izveidot metodi, kas ļauj tev pieņemt jaunu darbinieku un saglabā informāciju failā
--[x] Main klasē izveidot metodi, kas ļauj tev izveidot jaunu picas pasūtījumu un saglabā informāciju failā
--[x] Main klasē izveidot metodi, kas ļauj apskatīties ēdien karti
--[x] Main klasē izveidot metodi, kas beidz koda darbību un izdēš visus izveidotos failus
--[x] Main klasē izveidot metodi, kas ļauj apskatīt pasūtījuma datus.
--[x] Veiksmīgi augšupielādēt failu uz GitHub 
+- [x] Izveidot klasi klients, pica un darbinieks.
+- [x] Main klasē picērija izveidot metodi, kas izveido jaunu picu un saglabā informāciju failā
+- [x] Main klasē izveidot metodi, kas ļauj tev pieņemt jaunu darbinieku un saglabā informāciju failā
+- [x] Main klasē izveidot metodi, kas ļauj tev izveidot jaunu picas pasūtījumu un saglabā informāciju failā
+- [x] Main klasē izveidot metodi, kas ļauj apskatīties ēdien karti
+- [x] Main klasē izveidot metodi, kas beidz koda darbību un izdēš visus izveidotos failus
+- [x] Main klasē izveidot metodi, kas ļauj apskatīt pasūtījuma datus.
+- [x] Veiksmīgi augšupielādēt failu uz GitHub 
