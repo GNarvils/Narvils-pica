@@ -1,5 +1,6 @@
 package pica;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -8,6 +9,9 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 
 public class Picerija {
+   static File Picas = new File("Pica.txt");
+   static File Klienti = new File("Klients.txt");
+   static File Darbinieki = new File("Darbinieki.txt");
    static String failsPicas = "Pica.txt";
    static String failsKlienti = "Klients.txt";
    static String failsDarbinieki  = "Darbinieki.txt";
@@ -160,7 +164,7 @@ public class Picerija {
         case "4":
         	nolasit(picas);
         break;
-        case "ata": JOptionPane.showMessageDialog(null, "Uz redzēšanos!" ); break;
+        case "ata": JOptionPane.showMessageDialog(null, "Uz redzēšanos!" ); Picas.delete(); Klienti.delete(); Darbinieki.delete(); break;
         default: JOptionPane.showMessageDialog(null, "Mēs nezinam pa, ko jūs runājat!",  "Kļūda", JOptionPane.ERROR_MESSAGE);break;
         }
 	}while(!izvele.equals("ata"));
