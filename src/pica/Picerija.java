@@ -97,7 +97,7 @@ public class Picerija {
 			   }
 	   	
 	   }
-   static pica[] nolasit(pica[] picas){
+   static pica[] nolasitP(pica[] picas){
   	 String virkne="", teksts;
 		   try{
 		     FileReader fr = new FileReader(failsPicas);
@@ -112,6 +112,21 @@ public class Picerija {
 	   }
 		return picas;
   }
+   static klients[] nolasitK(klients[] klienti){
+	  	 String virkne="", teksts;
+			   try{
+			     FileReader fr = new FileReader(failsKlienti);
+			     BufferedReader lasa = new BufferedReader(fr);
+			     while((teksts=lasa.readLine()) != null){
+			    	 virkne = virkne+teksts+"\n";
+			     }
+			     lasa.close();
+			   JOptionPane.showMessageDialog(null, virkne);
+			   }catch(Exception e){
+			    	JOptionPane.showMessageDialog(null, "Programmā ir kļūda klientu lasīšanas procesā!", "Kļūda", JOptionPane.ERROR_MESSAGE);    	
+		   }
+			return klienti;
+	  }
 	public static void main(String[] args) {
 		String izvele;
 		pica[] picas = null;
@@ -127,7 +142,7 @@ public class Picerija {
 		JOptionPane.showMessageDialog(null, "Esiet sveicināti picērijā!");
 		JOptionPane.showMessageDialog(null, "Ko jūs gribētu darīt!");
 		do {
-		izvele = JOptionPane.showInputDialog("1 - Izveidot jaunu picu! | 2 - Pieteikties darbam | 3 - Izveidot jaunu pasūtījumu | 4 - Parādīt ēdienkarti | ata - Iet prom ");
+		izvele = JOptionPane.showInputDialog("1 - Izveidot jaunu picu! | 2 - Pieteikties darbam | 3 - Izveidot jaunu pasūtījumu | 4 - Parādīt ēdienkarti | 5 - Parādīt pasūtījuma sarakstu |ata - Iet prom ");
         izvele.toLowerCase();
         switch(izvele) {
         case "1":
@@ -162,8 +177,11 @@ public class Picerija {
     	
         break;
         case "4":
-        	nolasit(picas);
+        	nolasitP(picas);
         break;
+        case "5":
+            nolasitK(klienti);
+        break;	
         case "ata": JOptionPane.showMessageDialog(null, "Uz redzēšanos!" ); Picas.delete(); Klienti.delete(); Darbinieki.delete(); break;
         default: JOptionPane.showMessageDialog(null, "Mēs nezinam pa, ko jūs runājat!",  "Kļūda", JOptionPane.ERROR_MESSAGE);break;
         }
