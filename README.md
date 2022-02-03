@@ -3,7 +3,7 @@ Java projekts kurš ļāuj lietotājam vadīt picēriju. Var veidot jaunu picu, 
 
 ![Picas attēls](https://www.amberpizza.lv/wp-content/uploads/2021/01/03-Salami-pica-copy-min-300x300.png)
 
-:pizza:
+:pizza: :pizza: :pizza: :pizza: :pizza: :pizza: :pizza: :pizza: :pizza: :pizza: :pizza:
 
 ### **Daramo darbu saraksts**
 
